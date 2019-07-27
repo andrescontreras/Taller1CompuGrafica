@@ -7,14 +7,6 @@
 #include <GL/gl.h>
 #include "Punto.h"
 
-
-
-/* funciones para pintar puntos*/
-//void pintarPunto(punto) {
-//
-//}
-
-
 void myInit(void) {
 
 	glClearColor(1.0, 1.0, 1.0, 1.0);
@@ -28,7 +20,7 @@ void myInit(void) {
 
 }
 
-
+/* funciones para pintar puntos*/
 void dibujarPunto(Punto p) {
 	glColor3fv(p.color);
 	glPointSize(p.tamano);
