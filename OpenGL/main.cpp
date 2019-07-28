@@ -159,12 +159,9 @@ void myDisplay(void) {
 	// Fin Division mar
     
 	// Inicio Mar
-    Punto divisionMar[] = { 
-	Punto(21,29,8)	
-	}
 
 	dibujarPuntoMismoColor(contornoEstrella, 65, 255, 76, 51);
-	dibujarPuntoMismoColor(divisionMar, 19, 247, 187, 94);
+	dibujarPuntoMismoColor(divisionMar, 20, 247, 187, 94);
 
 	
 	glFlush();
