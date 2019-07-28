@@ -2,14 +2,15 @@
 //  Creado por Andrea Rueda, 01/2018
 //
 // #include <GL/glut.h>
-// cambio 2 **********************************
+
 #include <GL/freeglut.h>
 #include <GL/gl.h>
 #include "Punto.h"
-//Hola
-//Hello
-// dasdasdasdaasdsa
-//Linea11
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
 void myInit(void) {
 
 	glClearColor(1.0, 1.0, 1.0, 1.0);
@@ -159,7 +160,23 @@ void myDisplay(void) {
 	// Fin Division mar
     
 	// Inicio Mar
-
+	float j = 0.0;
+	for(float i = 0.0; i <= 14.5; i += 0.3 )
+        dibujarPunto(Punto(21.0,29-i,82.0,65.0,220.0,3));
+    srand (time(NULL));
+    for(float i = 29; i >= 24.90 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 21; j+= 0.3 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,169, 230, 238,rand() % 3 + 1.2));
+    }
+    srand (time(NULL));
+    float k = 0.0;
+    for(float i = 24.80; i >=14.5 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 7.2 + k;j <= 21; j+= 0.3 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j,i,169, 230, 238,rand() % 3 + 1.2));
+        k += 0.15 + (float)(rand() % 5 + (1) )/100;
+    }
 	dibujarPuntoMismoColor(contornoEstrella, 65, 255, 76, 51);
 	dibujarPuntoMismoColor(divisionMar, 20, 247, 187, 94);
 
