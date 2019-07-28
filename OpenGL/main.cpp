@@ -7,7 +7,7 @@
 #include <GL/gl.h>
 #include "Punto.h"
 //Hola
-
+//Hello
 void myInit(void) {
 
 	glClearColor(1.0, 1.0, 1.0, 1.0);
