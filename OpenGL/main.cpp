@@ -6,6 +6,7 @@
 #include <GL/freeglut.h>
 #include <GL/gl.h>
 #include "Punto.h"
+//Hola
 
 void myInit(void) {
 
