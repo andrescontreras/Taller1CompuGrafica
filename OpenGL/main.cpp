@@ -8,6 +8,7 @@
 #include "Punto.h"
 //Hola
 //Hello
+// dasdasdasdaasdsa
 void myInit(void) {
 
 	glClearColor(1.0, 1.0, 1.0, 1.0);
