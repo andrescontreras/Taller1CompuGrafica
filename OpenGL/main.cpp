@@ -9,6 +9,7 @@
 //Hola
 //Hello
 // dasdasdasdaasdsa
+//Linea11
 void myInit(void) {
 
 	glClearColor(1.0, 1.0, 1.0, 1.0);
