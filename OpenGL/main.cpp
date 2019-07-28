@@ -134,8 +134,8 @@ void myDisplay(void) {
 	};
 	// Fin Contorno Estrella
 
-	// Divicion mar
-	Punto divicionMar[] = { Punto(0, 22.8, 4),
+	// Division mar
+	Punto divisionMar[] = { Punto(0, 22.8, 4),
 	Punto(1.3, 22.2, 4),
 	Punto(3, 22.6, 4),
 	Punto(4, 22.8, 4),
@@ -156,10 +156,15 @@ void myDisplay(void) {
 	Punto(19, 11.5, 4),
 	Punto(21, 11, 4),
 	};
-	// Fin Divicion mar
+	// Fin Division mar
+    
+	// Inicio Mar
+    Punto divisionMar[] = { 
+	Punto(21,29,8)	
+	}
 
 	dibujarPuntoMismoColor(contornoEstrella, 65, 255, 76, 51);
-	dibujarPuntoMismoColor(divicionMar, 19, 247, 187, 94);
+	dibujarPuntoMismoColor(divisionMar, 19, 247, 187, 94);
 
 	
 	glFlush();
