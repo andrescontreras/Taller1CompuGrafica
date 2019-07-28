@@ -48,12 +48,58 @@ void myDisplay(void) {
 
 	// Contorno Estrella
 	Punto contornoEstrella[] = { Punto(0, 4.8, 4),
+	Punto(0.3, 4.9, 4),
+	Punto(0.5, 5.1, 4),
+	Punto(0.8, 5, 4),
+	Punto(1, 5.1, 4),
+	Punto(1.3, 5.2, 4),
+	Punto(1.5, 5.4, 4),
+	Punto(1.7, 5.5, 4),
 	Punto(2, 5.6, 4),
+	Punto(2.3, 5.7, 4),
+	Punto(2.5, 5.8, 4),
+	Punto(2.7, 5.8, 4),
+	Punto(3, 5.9, 4),
+	Punto(3.3, 6.0, 4),
+	Punto(3.5, 6.1, 4),
 	Punto(3.8, 6.2, 4),
+	Punto(3.8, 5.7, 4),
+	Punto(3.8, 5.5, 4),
+	Punto(3.8, 5.3, 4),
+	Punto(3.8, 5.0, 4),
+	Punto(3.8, 4.8, 4),
 	Punto(3.8, 4.5, 4),
+	Punto(3.8, 4.3, 4),
+	Punto(3.8, 4.0, 4),
+	Punto(3.8, 3.7, 4),
 	Punto(3.8, 3.5, 4),
+	Punto(3.8, 3.3, 4),
+	Punto(3.8, 3.0, 4),
+	Punto(3.8, 2.7, 4),
+	Punto(3.8, 2.5, 4),
+	Punto(3.8, 2.3, 4),
+	Punto(3.8, 2.0, 4),
+	Punto(3.8, 1.7, 4),
+	Punto(3.8, 1.5, 4),
+	Punto(3.9, 1.3, 4),
+	Punto(3.9, 1, 4),
 	Punto(4, 0.7, 4),
+	Punto(4.1, 0.7, 4),
+	Punto(4.2, 0.7, 4),
+	Punto(4.3, 0.8, 4),
+	Punto(4.4, 0.8, 4),
+	Punto(4.5, 0.8, 4),
+	Punto(4.7, 1.3, 4),
+	Punto(5, 1.5, 4),
+	Punto(5.1, 1.7, 4),
 	Punto(5.2, 2, 4),
+		Punto(5.3, 2.5, 4),
+		Punto(5.5, 2.7, 4),
+		Punto(5.2, 2, 4),
+		Punto(5.2, 2, 4),
+		Punto(5.2, 2, 4),
+		Punto(5.2, 2, 4),
+		Punto(5.2, 2, 4),
 	Punto(6, 4, 4),
 	Punto(6.8, 6, 4),
 	Punto(7.5, 7, 4),
@@ -81,7 +127,7 @@ void myDisplay(void) {
 	Punto(3, 9.3, 4),
 	Punto(2, 8.5, 4),
 	Punto(0.5, 7.3, 4),
-	Punto(0, 6.9, 4),
+	Punto(0, 6.9, 8),
 	};
 	// Fin Contorno Estrella
 
@@ -109,7 +155,7 @@ void myDisplay(void) {
 	};
 	// Fin Divicion mar
 
-	dibujarPuntoMismoColor(contornoEstrella, 35, 255, 76, 51);
+	dibujarPuntoMismoColor(contornoEstrella, 65, 255, 76, 51);
 	dibujarPuntoMismoColor(divicionMar, 19, 247, 187, 94);
 
 	
