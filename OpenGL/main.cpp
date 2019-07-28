@@ -2,7 +2,7 @@
 //  Creado por Andrea Rueda, 01/2018
 //
 // #include <GL/glut.h>
-
+// cambio 2 **********************************
 #include <GL/freeglut.h>
 #include <GL/gl.h>
 #include "Punto.h"
