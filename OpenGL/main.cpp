@@ -371,7 +371,7 @@ void myDisplay(void) {
             dibujarPunto(Punto(j+0,i,240, 152, 37,rand() % 2 + 1.2));
     }
 
-	dibujarPuntoMismoColor(contornoEstrella, 65, 255, 76, 51);
+	dibujarPuntoMismoColor(contornoEstrella, 179, 255, 76, 51);
 	dibujarPuntoMismoColor(divisionMar, 20, 247, 187, 94);
 
 	
