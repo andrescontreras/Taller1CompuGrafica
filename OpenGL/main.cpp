@@ -33,6 +33,13 @@ void dibujarPunto(Punto p) {
 	glEnd();
 }
 
+
+void dibujarLinea(float x1, float x2, float y ,float r, float g, float b) {
+	for (float i = x1; i < x2; i=i+0.3)
+	{
+		dibujarPunto(Punto(i, y, r, g, b, rand() % 4 + 1.2));
+	}
+}
 void dibujarPuntoMismoColor(Punto p[], float tam, float r, float g, float b) {
 
 	for (int i = 0; i < tam; i++)
@@ -233,6 +240,33 @@ void myDisplay(void) {
 	Punto(0, 6.9, 8),
 	};
 	// Fin Contorno Estrella
+	dibujarLinea(1.5, 2.0, 12.7, 255, 76, 51);
+	dibujarLinea(1.4, 2.3, 12.5, 255, 76, 51);
+	dibujarLinea(1.5, 2.6, 12.3, 255, 76, 51);
+	dibujarLinea(1.6, 3.3, 12.0, 255, 76, 51);
+	dibujarLinea(1.7, 3.8, 11.7, 255, 76, 51);
+	dibujarLinea(1.8, 4.3, 11.5, 255, 76, 51);
+	dibujarLinea(2.0, 4.7, 11.3, 255, 76, 51);
+	dibujarLinea(2.2, 8.5, 11, 255, 76, 51);
+	dibujarLinea(2.3, 8.4, 10.7, 255, 76, 51);
+	dibujarLinea(2.4, 8.3, 10.5, 255, 76, 51);
+	dibujarLinea(2.6, 8.3, 10.3, 255, 76, 51);
+	dibujarLinea(2.7, 8.3, 10, 255, 76, 51);
+	dibujarLinea(2.9, 8.3, 9.7, 255, 76, 51);
+	dibujarLinea(3.3, 8.4, 9.5, 255, 76, 51);
+	dibujarLinea(3.1, 8.6, 9.3, 255, 76, 51);
+	dibujarLinea(3,9,9, 255, 76, 51);
+	dibujarLinea(2.4,9.2, 8.7, 255, 76, 51);
+	dibujarLinea(2.2,9.5, 8.5, 255, 76, 51);
+	dibujarLinea(1.7,9.7, 8.3, 255, 76, 51);
+	dibujarLinea(2.4,10.1, 8, 255, 76, 51);
+	dibujarLinea(1,10.5, 7.7, 255, 76, 51);
+	dibujarLinea(0.7,10.7, 7.5, 255, 76, 51);
+	dibujarLinea(0.5,11, 7.3, 255, 76, 51);
+	dibujarLinea(0,11.3, 7.0, 255, 76, 51);
+	dibujarLinea(0,6.1, 6.7, 255, 76, 51);
+
+
 
 	// Division mar
 	Punto divisionMar[] = { Punto(0, 22.8, 4),
@@ -276,7 +310,7 @@ void myDisplay(void) {
             dibujarPunto(Punto(j,i,169, 230, 238,rand() % 3 + 1.2));
         k += 0.15 + (float)(rand() % 5 + (1) )/100;
     }
-	dibujarPuntoMismoColor(contornoEstrella, 65, 255, 76, 51);
+	dibujarPuntoMismoColor(contornoEstrella, 179, 255, 76, 51);
 	dibujarPuntoMismoColor(divisionMar, 20, 247, 187, 94);
 
 	
