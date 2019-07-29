@@ -352,10 +352,9 @@ void myDisplay(void) {
 	// Fin Division mar
     
 	// Inicio Mar
-	// Inicio Mar
 	float j = 0.0;
     float k = 0.0;
-
+    float p = 0.0;
 	for(float i = 0.0; i <= 14.5; i += 0.3 )
         dibujarPunto(Punto(21.0,29-i,82.0,65.0,220.0,3));
     srand (time(NULL));
@@ -382,6 +381,16 @@ void myDisplay(void) {
     dibujarPunto(Punto(10,18,169, 230, 238,rand() % 2 + 1.2));
     dibujarPunto(Punto(9,18,169, 230, 238,rand() % 2 + 1.2));
     dibujarPunto(Punto(9,17.3,169, 230, 238,rand() % 2 + 1.2));
+    dibujarPunto(Punto(8,17.3,169, 230, 238,rand() % 2 + 1.4));
+    dibujarPunto(Punto(8.5,16.3,169, 230, 238,rand() % 2 + 1.4));
+    dibujarPunto(Punto(8.3,17.1,169, 230, 238,rand() % 2 + 1.4));
+    dibujarPunto(Punto(8.7,16.6,169, 230, 238,rand() % 2 + 1.4));
+    dibujarPunto(Punto(8.9,17.5,169, 230, 238,rand() % 2 + 1.4));
+    dibujarPunto(Punto(11.8,17.1,169, 230, 238,rand() % 2 + 1.4));
+    dibujarPunto(Punto(11.5,16.2,169, 230, 238,rand() % 2 + 1.4));
+    dibujarPunto(Punto(11.6,17.3,169, 230, 238,rand() % 2 + 1.4));
+    dibujarPunto(Punto(11.9,16.86,169, 230, 238,rand() % 2 + 1.4));
+    dibujarPunto(Punto(11.3,17.2,169, 230, 238,rand() % 2 + 1.4));
     srand (time(NULL));
     for(float i = 29; i >= 24.90 ; i-= 0.1 + (float)(rand() % 6 + (1) )/100)
     {
@@ -405,30 +414,140 @@ void myDisplay(void) {
         k += 0.205 + (float)(rand() % 5 + (1) )/100;
     }
 	//Inicio Arena
- 	//Color beige
-   for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
-   {
-       for(j = 0;j <= 21; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
-           dibujarPunto(Punto(j+0,i,226, 133, 26,rand() % 2 + 1.2));
-   }
-   //Color Amarillo
-   for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
-   {
-       for(j = 0;j <= 21; j+= 0.7 + (float)(rand() % 21 + (-10) )/100 )
-           dibujarPunto(Punto(j+0,i,240, 236, 172,rand() % 2 + 1.2));
-   }
-   //Color cafe
-   for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
-   {
-       for(j = 0;j <= 21; j+= 0.9 + (float)(rand() % 21 + (-10) )/100 )
-           dibujarPunto(Punto(j+0,i,144, 104, 52,rand() % 2 + 1.2));
-   }
-   //Color naranja
-   for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
-   {
-       for(j = 0;j <= 21; j+= 0.6 + (float)(rand() % 21 + (-10) )/100 )
-           dibujarPunto(Punto(j+0,i,240, 152, 37,rand() % 2 + 1.2));
-   }
+    //Color beige
+    for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 21; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,226, 133, 26,1.4));
+    }
+    for(float i = 15.5; i >= 10.8 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 10; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,226, 133, 26,1.4));
+    }
+    for(float i = 21.7; i >= 15.6 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 5.9; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,226, 133, 26,1.4));
+    }
+    for(float i = 21.7; i >= 15.6 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 5.75;j <= 5.75 + p ; j+= 0.4 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,226, 133, 26,1.4));
+        p += 0.08;
+    }
+    p = 0;
+    for(float i = 16.2; i >= 10.6 ; i-= 0.2 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 10;j <= 10 + p ; j+= 0.3 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,226, 133, 26,1.4));
+        p += 0.45;
+    }
+    p = 0;
+    for(float i = 22.8; i >= 21.8 ; i-= 0.25 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 5.9 + p ; j+= 0.35 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,226, 133, 26,1.4));
+    }
+    dibujarPunto(Punto(12.5,15.4,226, 133, 26,1.4));
+    dibujarPunto(Punto(12.3,15.5,226, 133, 26,1.4));
+    dibujarPunto(Punto(12.2,15.1,226, 133, 26,1.4));
+    dibujarPunto(Punto(12.1,15.2,226, 133, 26,1.4));
+    dibujarPunto(Punto(12.8,15.3,226, 133, 26,1.4));
+    dibujarPunto(Punto(12.6,15,226, 133, 26,1.4));
+    dibujarPunto(Punto(13,15.3,226, 133, 26,1.4));
+    dibujarPunto(Punto(13,15,226, 133, 26,1.4));
+
+    //Color Amarillo
+    for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 21; j+= 0.7 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,240, 236, 172,1.4));
+    }
+    for(float i = 15.5; i >= 10.8 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 10; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,240, 236, 172,1.4));
+    }
+    for(float i = 21.7; i >= 15.6 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 5.9; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,240, 236, 172,1.4));
+    }
+    for(float i = 21.7; i >= 15.6 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 5.75;j <= 5.75 + p ; j+= 0.4 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,240, 236, 172,1.4));
+        p += 0.08;
+    }
+    p = 0;
+    for(float i = 16.2; i >= 10.6 ; i-= 0.2 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 10;j <= 10 + p ; j+= 0.3 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,240, 236, 172,1.4));
+        p += 0.45;
+    }
+    p = 0;
+    //Color cafe
+    for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 21; j+= 0.9 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,144, 104, 52,1.4));
+    }
+    for(float i = 15.5; i >= 10.8 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 10; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,144, 104, 52,1.4));
+    }
+    for(float i = 21.7; i >= 15.6 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 5.9; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,144, 104, 52,1.4));
+    }
+    for(float i = 21.7; i >= 15.6 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 5.75;j <= 5.75 + p ; j+= 0.4 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,144, 104, 52,1.4));
+        p += 0.08;
+    }
+    p = 0;
+    for(float i = 16.2; i >= 10.6 ; i-= 0.2 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 10;j <= 10 + p ; j+= 0.3 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,144, 104, 52,1.4));
+        p += 0.45;
+    }
+    p = 0;
+    //Color naranja
+    for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 21; j+= 0.6 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,240, 152, 37,1.4));
+    }
+    for(float i = 15.5; i >= 10.8 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 10; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,240, 152, 37,1.4));
+    }
+    for(float i = 21.7; i >= 15.6 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 5.9; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,240, 152, 37,1.4));
+    }
+    for(float i = 21.7; i >= 15.6 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 5.75;j <= 5.75 + p ; j+= 0.4 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,240, 152, 37,1.4));
+        p += 0.08;
+    }
+    p = 0;
+    for(float i = 16.2; i >= 10.6 ; i-= 0.2 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 10;j <= 10 + p ; j+= 0.3 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,240, 152, 37,1.4));
+        p += 0.45;
+    }
+    p = 0;
 
 	dibujarPuntoMismoColor(contornoEstrella, 179, 255, 76, 51);
 	dibujarPuntoMismoColor(divisionMar, 20, 247, 187, 94);
