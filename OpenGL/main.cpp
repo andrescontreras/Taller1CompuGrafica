@@ -6,6 +6,10 @@
 #include <GL/freeglut.h>
 #include <GL/gl.h>
 #include "Punto.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 
 void myInit(void) {
 
@@ -230,8 +234,8 @@ void myDisplay(void) {
 	};
 	// Fin Contorno Estrella
 
-	// Divicion mar
-	Punto divicionMar[] = { Punto(0, 22.8, 4),
+	// Division mar
+	Punto divisionMar[] = { Punto(0, 22.8, 4),
 	Punto(1.3, 22.2, 4),
 	Punto(3, 22.6, 4),
 	Punto(4, 22.8, 4),
@@ -252,10 +256,28 @@ void myDisplay(void) {
 	Punto(19, 11.5, 4),
 	Punto(21, 11, 4),
 	};
-	// Fin Divicion mar
-
-	dibujarPuntoMismoColor(contornoEstrella, 180, 255, 76, 51);
-	dibujarPuntoMismoColor(divicionMar, 19, 247, 187, 94);
+	// Fin Division mar
+    
+	// Inicio Mar
+	float j = 0.0;
+	for(float i = 0.0; i <= 14.5; i += 0.3 )
+        dibujarPunto(Punto(21.0,29-i,82.0,65.0,220.0,3));
+    srand (time(NULL));
+    for(float i = 29; i >= 24.90 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 21; j+= 0.3 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,169, 230, 238,rand() % 3 + 1.2));
+    }
+    srand (time(NULL));
+    float k = 0.0;
+    for(float i = 24.80; i >=14.5 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 7.2 + k;j <= 21; j+= 0.3 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j,i,169, 230, 238,rand() % 3 + 1.2));
+        k += 0.15 + (float)(rand() % 5 + (1) )/100;
+    }
+	dibujarPuntoMismoColor(contornoEstrella, 65, 255, 76, 51);
+	dibujarPuntoMismoColor(divisionMar, 20, 247, 187, 94);
 
 	
 	glFlush();
