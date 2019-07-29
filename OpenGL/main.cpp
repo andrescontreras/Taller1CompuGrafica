@@ -293,7 +293,10 @@ void myDisplay(void) {
 	// Fin Division mar
     
 	// Inicio Mar
+	// Inicio Mar
 	float j = 0.0;
+    float k = 0.0;
+
 	for(float i = 0.0; i <= 14.5; i += 0.3 )
         dibujarPunto(Punto(21.0,29-i,82.0,65.0,220.0,3));
     srand (time(NULL));
@@ -303,14 +306,72 @@ void myDisplay(void) {
             dibujarPunto(Punto(j+0,i,169, 230, 238,rand() % 3 + 1.2));
     }
     srand (time(NULL));
-    float k = 0.0;
+    for(float i = 24.80; i >= 22.4; i-= 0.2 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 10; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,169, 230, 238,rand() % 2 + 1.2));
+    }
+
+    for(float i = 22.50; i >=10 ; i-= 0.4 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 5 + k;j <= 21; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j,i,169, 230, 238,rand() % 2 + 1.2));
+        k += 0.5+ (float)(rand() % 5 + (1) )/100;
+    }
+    dibujarPunto(Punto(12,16,169, 230, 238,rand() % 2 + 1.2));
+    dibujarPunto(Punto(10,17,169, 230, 238,rand() % 2 + 1.2));
+    dibujarPunto(Punto(10,18,169, 230, 238,rand() % 2 + 1.2));
+    dibujarPunto(Punto(9,18,169, 230, 238,rand() % 2 + 1.2));
+    dibujarPunto(Punto(9,17.3,169, 230, 238,rand() % 2 + 1.2));
+    srand (time(NULL));
+    for(float i = 29; i >= 24.90 ; i-= 0.1 + (float)(rand() % 6 + (1) )/100)
+    {
+        for(j = 0;j <= 21; j+= 0.33 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,82.0,65.0,220.0,rand() % 3 + 1.4));
+    }
+    srand (time(NULL));
+    k = 0.0;
     for(float i = 24.80; i >=14.5 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
     {
         for(j = 7.2 + k;j <= 21; j+= 0.3 + (float)(rand() % 21 + (-10) )/100 )
             dibujarPunto(Punto(j,i,169, 230, 238,rand() % 3 + 1.2));
         k += 0.15 + (float)(rand() % 5 + (1) )/100;
     }
-	dibujarPuntoMismoColor(contornoEstrella, 179, 255, 76, 51);
+    srand (time(NULL));
+    k = 0.0;
+    for(float i = 24.80; i >=14.5 ; i-= 0.14 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 7.2 + k;j <= 21; j+= 0.33 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j,i,82.0,65.0,220.0,rand() % 3 + 1.4));
+        k += 0.205 + (float)(rand() % 5 + (1) )/100;
+    }
+	//Inicio Arena
+    //Color beige
+    for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 21; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,226, 133, 26,rand() % 2 + 1.2));
+    }
+    //Color Amarillo
+    for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 21; j+= 0.7 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,240, 236, 172,rand() % 2 + 1.2));
+    }
+    //Color cafe
+    for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 21; j+= 0.9 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,144, 104, 52,rand() % 2 + 1.2));
+    }
+    //Color naranja
+    for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+    {
+        for(j = 0;j <= 21; j+= 0.6 + (float)(rand() % 21 + (-10) )/100 )
+            dibujarPunto(Punto(j+0,i,240, 152, 37,rand() % 2 + 1.2));
+    }
+
+	dibujarPuntoMismoColor(contornoEstrella, 65, 255, 76, 51);
 	dibujarPuntoMismoColor(divisionMar, 20, 247, 187, 94);
 
 	
