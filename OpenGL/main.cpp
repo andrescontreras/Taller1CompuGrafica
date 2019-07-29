@@ -35,11 +35,23 @@ void dibujarPunto(Punto p) {
 
 
 void dibujarLinea(float x1, float x2, float y ,float r, float g, float b) {
+	float r1=255,g1=76,b1=51,r2=247,g2=94,b2=187;
+	float bandera = true;
 	for (float i = x1; i < x2; i=i+0.3)
 	{
-		dibujarPunto(Punto(i, y, r, g, b, rand() % 4 + 1.2));
+		bandera = !bandera;
+		
+		if (bandera)
+		{
+			dibujarPunto(Punto(i, y, r1, g1, b1, rand() % 4 + 1.2));
+		}
+		else 
+		{
+			dibujarPunto(Punto(i, y, r2, g2, b2, rand() % 4 + 1.2));
+		}
 	}
 }
+
 void dibujarPuntoMismoColor(Punto p[], float tam, float r, float g, float b) {
 
 	for (int i = 0; i < tam; i++)
@@ -240,6 +252,17 @@ void myDisplay(void) {
 	Punto(0, 6.9, 8),
 	};
 	// Fin Contorno Estrella
+	// relleno estrella
+	dibujarLinea(8.7, 9.0, 13.3, 255, 76, 51);
+	dibujarLinea(8.4, 9.0, 13.0, 255, 76, 51);
+	dibujarLinea(8.1, 9.0, 12.7, 255, 76, 51);
+	dibujarLinea(7.8, 8.9, 12.5, 255, 76, 51);
+	dibujarLinea(7.4, 8.9, 12.3, 255, 76, 51);
+	dibujarLinea(7.1, 8.8, 12.0, 255, 76, 51);
+	dibujarLinea(6.8, 8.6, 11.7, 255, 76, 51);
+	dibujarLinea(6.6, 8.5, 11.5, 255, 76, 51);
+	dibujarLinea(6.2, 8.5, 11.3, 255, 76, 51);
+
 	dibujarLinea(1.5, 2.0, 12.7, 255, 76, 51);
 	dibujarLinea(1.4, 2.3, 12.5, 255, 76, 51);
 	dibujarLinea(1.5, 2.6, 12.3, 255, 76, 51);
@@ -265,6 +288,42 @@ void myDisplay(void) {
 	dibujarLinea(0.5,11, 7.3, 255, 76, 51);
 	dibujarLinea(0,11.3, 7.0, 255, 76, 51);
 	dibujarLinea(0,6.1, 6.7, 255, 76, 51);
+	dibujarLinea(0, 3.7, 6.3, 255, 76, 51);
+	dibujarLinea(0, 2.9, 6.0, 255, 76, 51);
+	dibujarLinea(0, 2.4, 5.7, 255, 76, 51);
+	dibujarLinea(0, 1.5, 5.5, 255, 76, 51);
+	dibujarLinea(0, 0.9, 5.3, 255, 76, 51);
+
+	dibujarLinea(8.2, 11.5, 6.7, 255, 76, 51);
+	dibujarLinea(8.8, 11.8, 6.5, 255, 76, 51);
+	dibujarLinea(9.4, 12.1, 6.3, 255, 76, 51);
+	dibujarLinea(10.1, 12.3, 6.0, 255, 76, 51);
+	dibujarLinea(10.9, 12.5, 5.7, 255, 76, 51);
+	dibujarLinea(11.6, 12.7, 5.5, 255, 76, 51);
+
+	dibujarLinea(3.9, 6.8, 6.3, 255, 76, 51);
+	dibujarLinea(3.9, 6.7, 6.0, 255, 76, 51);
+	dibujarLinea(3.9, 6.6, 5.7, 255, 76, 51);
+	dibujarLinea(3.9, 6.4, 5.5, 255, 76, 51);
+	dibujarLinea(3.9, 6.3, 5.3, 255, 76, 51);
+	dibujarLinea(3.9, 6.2, 5.0, 255, 76, 51);
+	dibujarLinea(3.9, 6.2, 4.7, 255, 76, 51);
+	dibujarLinea(3.9, 6.0, 4.5, 255, 76, 51);
+	dibujarLinea(3.9, 6.0, 4.3, 255, 76, 51);
+	dibujarLinea(3.9, 6.8, 4.0, 255, 76, 51);
+	dibujarLinea(3.9, 5.7, 3.7, 255, 76, 51);
+	dibujarLinea(3.9, 5.4, 3.5, 255, 76, 51);
+	dibujarLinea(3.9, 5.5, 3.3, 255, 76, 51);
+	dibujarLinea(3.9, 5.5, 3.0, 255, 76, 51);
+	dibujarLinea(3.9, 5.3, 2.7, 255, 76, 51);
+	dibujarLinea(3.9, 5.2, 2.5, 255, 76, 51);
+	dibujarLinea(3.9, 5.2, 2.3, 255, 76, 51);
+	dibujarLinea(3.9, 5.1, 2.0, 255, 76, 51);
+	dibujarLinea(3.9, 4.8, 1.7, 255, 76, 51);
+	dibujarLinea(3.9, 4.8, 1.5, 255, 76, 51);
+	dibujarLinea(3.9, 4.6, 1.3, 255, 76, 51);
+
+
 
 
 
@@ -346,30 +405,30 @@ void myDisplay(void) {
         k += 0.205 + (float)(rand() % 5 + (1) )/100;
     }
 	//Inicio Arena
-    //Color beige
-    for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
-    {
-        for(j = 0;j <= 21; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
-            dibujarPunto(Punto(j+0,i,226, 133, 26,rand() % 2 + 1.2));
-    }
-    //Color Amarillo
-    for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
-    {
-        for(j = 0;j <= 21; j+= 0.7 + (float)(rand() % 21 + (-10) )/100 )
-            dibujarPunto(Punto(j+0,i,240, 236, 172,rand() % 2 + 1.2));
-    }
-    //Color cafe
-    for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
-    {
-        for(j = 0;j <= 21; j+= 0.9 + (float)(rand() % 21 + (-10) )/100 )
-            dibujarPunto(Punto(j+0,i,144, 104, 52,rand() % 2 + 1.2));
-    }
-    //Color naranja
-    for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
-    {
-        for(j = 0;j <= 21; j+= 0.6 + (float)(rand() % 21 + (-10) )/100 )
-            dibujarPunto(Punto(j+0,i,240, 152, 37,rand() % 2 + 1.2));
-    }
+ 	//Color beige
+   for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+   {
+       for(j = 0;j <= 21; j+= 0.5 + (float)(rand() % 21 + (-10) )/100 )
+           dibujarPunto(Punto(j+0,i,226, 133, 26,rand() % 2 + 1.2));
+   }
+   //Color Amarillo
+   for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+   {
+       for(j = 0;j <= 21; j+= 0.7 + (float)(rand() % 21 + (-10) )/100 )
+           dibujarPunto(Punto(j+0,i,240, 236, 172,rand() % 2 + 1.2));
+   }
+   //Color cafe
+   for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+   {
+       for(j = 0;j <= 21; j+= 0.9 + (float)(rand() % 21 + (-10) )/100 )
+           dibujarPunto(Punto(j+0,i,144, 104, 52,rand() % 2 + 1.2));
+   }
+   //Color naranja
+   for(float i = 10.7; i >= 0 ; i-= 0.1 + (float)(rand() % 5 + (1) )/100)
+   {
+       for(j = 0;j <= 21; j+= 0.6 + (float)(rand() % 21 + (-10) )/100 )
+           dibujarPunto(Punto(j+0,i,240, 152, 37,rand() % 2 + 1.2));
+   }
 
 	dibujarPuntoMismoColor(contornoEstrella, 179, 255, 76, 51);
 	dibujarPuntoMismoColor(divisionMar, 20, 247, 187, 94);
